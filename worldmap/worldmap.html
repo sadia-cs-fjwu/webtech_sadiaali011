@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>World Map</title>
+</head>
+
+<body bgcolor="#F3EEFF" align="center">
+
+    <h1><font color="#4B0082">World Map Navigation</font></h1>
+
+    <p>
+        <font size="4">
+            Click on North America, South America, Africa, or Asia
+            to open its map.
+        </font>
+    </p>
+
+    <hr width="80%">
+
+    <br>
+
+    <img src="images/worldmap.jpg"
+         alt="World Map"
+         usemap="#world-map"
+         width="800">
+
+    <map name="world-map">
+
+        <!-- North America -->
+        <area shape="rect"
+              coords="10,25,250,260"
+              href="northamerica.html"
+              alt="North America">
+
+        <!-- South America -->
+        <area shape="rect"
+              coords="140,255,250,450"
+              href="southamerica.html"
+              alt="South America">
+
+        <!-- Africa -->
+        <area shape="rect"
+              coords="315,160,485,375"
+              href="africa.html"
+              alt="Africa">
+
+        <!-- Asia -->
+        <area shape="rect"
+              coords="450,50,750,280"
+              href="asia.html"
+              alt="Asia">
+
+    </map>
+
+    <br><br>
+
+</body>
+</html>
