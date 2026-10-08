@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    background-color: #EAF7EA;
+    color: #17202A;
+    font-family: Arial;
+}
+
+#header {
+    background-color: #A9DFBF;
+    text-align: center;
+}
+
+#heading {
+    padding: 15px;
+}
+
+#heading h1 {
+    color: #145A32;
+}
+
+#nav {
+    background-color: #27AE60;
+    padding: 15px;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    padding: 10px 20px;
+}
+
+#nav a:hover {
+    background-color: #196F3D;
+}
+
+#content {
+    padding: 40px;
+    text-align: center;
+}
+
+#login-box {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #27AE60;
+}
+
+#register-box {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #27AE60;
+}
+
+#login-box h2,
+#register-box h2,
+#thankyou h2 {
+    color: #145A32;
+}
+
+#control {
+    margin: 15px;
+}
+
+#control label {
+    display: inline-block;
+    width: 180px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+    background-color: #D5D8DC;
+    border: 1px solid #7F8C8D;
+    padding: 8px;
+}
+
+#button {
+    margin: 20px;
+}
+
+#button input {
+    background-color: #27AE60;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+#button input:hover {
+    background-color: #196F3D;
+}
+
+#terms h3 {
+    color: #145A32;
+}
+
+a {
+    color: #1E8449;
+}
+
+a:hover {
+    color: #196F3D;
+}
+
+#thankyou {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 50px;
+    border: 2px solid #27AE60;
+}
+
+#footer {
+    background-color: #27AE60;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
