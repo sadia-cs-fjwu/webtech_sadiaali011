@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fa;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #dbeafe;
+    text-align: center;
+    padding: 14px 10px;
+    transition: 0.3s;
+}
+
+header h1 {
+    margin: 5px 0 12px;
+    font-size: 26px;
+    color: #263859;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.theme-btn {
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+.theme-btn:hover {
+    opacity: 0.8;
+}
+
+.theme-btn.active {
+    color: white;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 12px;
+}
+
+.login {
+    width: 340px;
+    max-width: 100%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #d9dfe8;
+}
+
+.login h2 {
+    text-align: center;
+    margin: 0 0 8px;
+    color: #263859;
+}
+
+.description {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    margin: 0 0 24px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 18px;
+    border: 1px solid #93b4f5;
+    border-radius: 5px;
+    background-color: #eff6ff;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #a5b4fc;
+}
+
+#loginBtn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    margin-top: 3px;
+}
+
+#loginBtn:hover {
+    opacity: 0.85;
+}
+
+#message {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: #dbeafe;
+    text-align: center;
+    padding: 10px;
+    color: #263859;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+footer p {
+    margin: 4px;
+}
+
+@media (max-width: 400px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .login {
+        padding: 20px;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    .theme-btn {
+        padding: 9px 15px;
+    }
+}
+
+@media (max-height: 550px) {
+    main {
+        padding: 10px;
+    }
+
+    .login {
+        padding: 15px 22px;
+    }
+
+    .description {
+        margin-bottom: 12px;
+    }
+
+    input {
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+}
