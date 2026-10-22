@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator-style.css">
+</head>
+<body>
+
+<div class="calculator">
+
+    <div class="top-bar">
+        <button class="top-button" onclick="toggleMenu()" aria-label="Menu">☰</button>
+        <span>Calculator</span>
+        <button class="top-button history-button" onclick="toggleHistory()" aria-label="History">◷</button>
+    </div>
+
+    <div class="menu-panel" id="menuPanel">
+        <button onclick="closeMenu()">Standard ✓</button>
+    </div>
+
+    <div class="mode-bar">
+        <h2>Standard</h2>
+    </div>
+
+    <div class="display">
+        <div id="expression"></div>
+        <input type="text" id="result" value="0" readonly aria-label="Calculator display">
+    </div>
+
+    <div class="memory-buttons">
+        <button id="mc" onclick="memoryClear()" disabled>MC</button>
+        <button id="mr" onclick="memoryRecall()" disabled>MR</button>
+        <button onclick="memoryAdd()">M+</button>
+        <button onclick="memorySubtract()">M-</button>
+        <button onclick="memorySave()">MS</button>
+        <button onclick="toggleMemory()">M⌄</button>
+    </div>
+
+    <div class="memory-panel" id="memoryPanel">
+        <div class="memory-heading">
+            <strong>Memory</strong>
+            <button onclick="toggleMemory()">×</button>
+        </div>
+        <div id="memoryList">There's nothing saved in memory</div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="percentage()">%</button>
+        <button onclick="squareRoot()">√</button>
+        <button onclick="square()">x²</button>
+        <button onclick="reciprocal()">1/x</button>
+
+        <button onclick="clearEntry()">CE</button>
+        <button onclick="clearAll()">C</button>
+        <button onclick="backspace()">⌫</button>
+        <button onclick="chooseOperator('/')">÷</button>
+
+        <button onclick="number('7')">7</button>
+        <button onclick="number('8')">8</button>
+        <button onclick="number('9')">9</button>
+        <button onclick="chooseOperator('*')">×</button>
+
+        <button onclick="number('4')">4</button>
+        <button onclick="number('5')">5</button>
+        <button onclick="number('6')">6</button>
+        <button onclick="chooseOperator('-')">−</button>
+
+        <button onclick="number('1')">1</button>
+        <button onclick="number('2')">2</button>
+        <button onclick="number('3')">3</button>
+        <button onclick="chooseOperator('+')">+</button>
+
+        <button onclick="changeSign()">±</button>
+        <button onclick="number('0')">0</button>
+        <button onclick="decimal()">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+    </div>
+
+    <div class="history-panel" id="historyPanel">
+        <div class="panel-heading">
+            <strong>History</strong>
+            <button onclick="toggleHistory()">×</button>
+        </div>
+        <div id="historyList">There's no history yet</div>
+        <button class="clear-history" onclick="clearHistory()">Clear history</button>
+    </div>
+
+</div>
+
+<script src="calculator-script.js"></script>
+</body>
+</html>
