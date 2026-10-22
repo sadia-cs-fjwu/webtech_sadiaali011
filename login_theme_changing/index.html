@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header id="header">
+        <h1>User Login System</h1>
+
+        <nav>
+            <button class="theme-btn" onclick="changeColor('blue')">Blue</button>
+            <button class="theme-btn" onclick="changeColor('green')">Green</button>
+            <button class="theme-btn" onclick="changeColor('yellow')">Yellow</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login">
+            <h2>Login Form</h2>
+            <p class="description">Please enter your details</p>
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
+
+            <button id="loginBtn" onclick="checkLogin()">Login</button>
+
+            <p id="message"></p>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <p>My Website | Thank you for visiting!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
