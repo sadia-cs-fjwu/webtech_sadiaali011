@@ -1,3 +1,4 @@
+
 * {
     box-sizing: border-box;
 }
@@ -166,7 +167,6 @@ footer p {
     .description {
         margin-bottom: 12px;
     }
-    
 
     input {
         padding: 8px;
