@@ -1,4 +1,9 @@
+
+var selectedColor = "blue";
+
 function changeColor(color) {
+    selectedColor = color;
+
     var header = document.getElementById("header");
     var footer = document.getElementById("footer");
     var loginBtn = document.getElementById("loginBtn");
@@ -56,7 +61,7 @@ function checkLogin() {
     var password = document.getElementById("password").value;
     var message = document.getElementById("message");
 
-    if (username == "student" && password == "12345") {
+    if (selectedColor == "blue" && username == "student" && password == "12345") {
         message.innerHTML = "Login Successful!";
         message.style.color = "green";
     } else {
