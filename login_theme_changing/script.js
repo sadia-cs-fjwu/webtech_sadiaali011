@@ -61,7 +61,10 @@ function checkLogin() {
     var password = document.getElementById("password").value;
     var message = document.getElementById("message");
 
-    if (selectedColor == "blue" && username == "student" && password == "12345") {
+    if (selectedColor == "blue") {
+        message.innerHTML = "Login Successful!";
+        message.style.color = "green";
+    } else if (username == "sadia" && password == "12345") {
         message.innerHTML = "Login Successful!";
         message.style.color = "green";
     } else {
