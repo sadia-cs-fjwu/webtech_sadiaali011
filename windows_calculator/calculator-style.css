@@ -1,323 +1,97 @@
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    margin: 0;
+    background-color: #1a1a1a;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #eeeeee;
-    font-family: Arial, sans-serif;
-    color: #202020;
+    padding: 20px;
 }
 
-button {
-    font-family: inherit;
-    color: inherit;
-    cursor: pointer;
-}
-
-.calculator {
+.calculator-container {
+    background: #202020;
     width: 320px;
-    height: 540px;
-    max-width: 100%;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    background: white;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #00000015;
+    padding: 16px;
+    border-radius: 12px;
 }
 
-.top-bar {
-    height: 32px;
-    flex-shrink: 0;
+.calc-header {
     display: flex;
-    align-items: center;
     gap: 8px;
-    font-size: 14px;
-}
-
-.top-button {
-    width: 32px;
-    height: 30px;
-    border: none;
-    background: transparent;
-    border-radius: 5px;
-    font-size: 19px;
-}
-
-.top-button:hover {
-    background: #eeeeee;
-}
-
-.history-button {
-    margin-left: auto;
-}
-
-.mode-bar {
-    height: 34px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-}
-
-.mode-bar h2 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.display {
-    flex: 1;
-    min-height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    overflow: hidden;
-    padding: 4px 3px 8px;
-}
-
-#expression {
-    min-height: 20px;
-    text-align: right;
-    color: #777777;
-    font-size: 13px;
-    overflow-wrap: anywhere;
-}
-
-#result {
-    width: 100%;
-    border: none;
-    outline: none;
-    background: transparent;
-    text-align: right;
-    font-family: Arial, sans-serif;
-    font-size: 36px;
-    font-weight: 500;
-    color: #202020;
-}
-
-.memory-buttons {
-    height: 30px;
-    flex-shrink: 0;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 2px;
-    margin-bottom: 5px;
-}
-
-.memory-buttons button {
-    padding: 0;
-    border: none;
-    border-radius: 4px;
-    background: transparent;
-    font-size: 11px;
-}
-
-.memory-buttons button:hover:not(:disabled) {
-    background: #eeeeee;
-}
-
-.memory-buttons button:disabled {
-    color: #b7b7b7;
-    cursor: default;
-}
-
-.buttons {
-    flex: 0 0 55%;
-    min-height: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    gap: 4px;
-}
-
-.buttons button {
-    min-width: 0;
-    min-height: 0;
-    padding: 0;
-    border: 1px solid #e2e2e2;
-    border-radius: 5px;
-    background: #f2f2f2;
-    font-size: 17px;
-}
-
-.buttons button:hover {
-    background: #e5e5e5;
-}
-
-.buttons button:active {
-    background: #d8d8d8;
-}
-
-.buttons .equal {
-    background: #4d91e8;
-    border-color: #4d91e8;
-    color: white;
-}
-
-.buttons .equal:hover {
-    background: #3478ce;
-}
-
-.menu-panel,
-.history-panel,
-.memory-panel {
-    display: none;
-    position: absolute;
-    z-index: 10;
-    background: white;
-    border: 1px solid #dddddd;
-    border-radius: 6px;
-    box-shadow: 0 3px 10px #00000020;
-}
-
-.menu-panel {
-    top: 42px;
-    left: 8px;
-    width: 170px;
-    padding: 5px;
-}
-
-.menu-panel button {
-    display: block;
-    width: 100%;
-    padding: 11px;
-    text-align: left;
-    background: transparent;
-    border: none;
-    border-radius: 4px;
-    font-size: 13px;
-}
-
-.menu-panel button:hover {
-    background: #eeeeee;
-}
-
-.history-panel,
-.memory-panel {
-    left: 8px;
-    right: 8px;
-    top: 70px;
-    max-height: 65%;
-    padding: 10px;
-    overflow-y: auto;
-    font-size: 13px;
-}
-
-.panel-heading,
-.memory-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.panel-heading button,
-.memory-heading button {
-    border: none;
-    background: transparent;
-    font-size: 20px;
-}
-
-.history-item,
-.memory-item {
-    padding: 9px 5px;
-    border-bottom: 1px solid #eeeeee;
-    cursor: pointer;
-}
-
-.history-item:hover,
-.memory-item:hover {
-    background: #f3f3f3;
-}
-
-.history-expression {
-    color: #777777;
-    margin-bottom: 3px;
-}
-
-.history-answer {
-    font-size: 17px;
+    color: #cccccc;
+    margin-bottom: 12px;
     font-weight: bold;
 }
 
-.clear-history {
-    margin-top: 10px;
-    padding: 7px 10px;
-    background: #eeeeee;
-    border: 1px solid #dddddd;
-    border-radius: 4px;
-    font-size: 12px;
+.calc-display {
+    text-align: right;
+    padding: 12px 8px;
+    margin-bottom: 12px;
+    min-height: 90px;
 }
 
-/* For smaller screens */
-
-@media (max-width: 350px) {
-    .calculator {
-        width: 100%;
-        padding: 5px;
-        border-radius: 0;
-    }
-
-    .buttons {
-        gap: 3px;
-    }
-
-    .buttons button {
-        font-size: 15px;
-    }
-
-    #result {
-        font-size: 32px;
-    }
+.history-display {
+    color: #888888;
+    font-size: 14px;
+    min-height: 20px;
 }
 
-/* For shorter screens */
+.main-display {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
 
-@media (max-height: 560px) {
-    body {
-        align-items: flex-start;
-    }
+.calc-keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
 
-    .calculator {
-        height: 100vh;
-        padding: 5px;
-    }
+.btn {
+    height: 52px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
-    .top-bar {
-        height: 28px;
-    }
+.btn:active {
+    transform: scale(0.96);
+}
 
-    .mode-bar {
-        height: 29px;
-    }
+.btn-number {
+    background-color: #3b3b3b;
+    color: white;
+}
 
-    .display {
-        min-height: 40px;
-    }
+.btn-number:hover {
+    background-color: #323232;
+}
 
-    .memory-buttons {
-        height: 25px;
-        margin-bottom: 3px;
-    }
+.btn-operator, .btn-action {
+    background-color: #2d2d2d;
+    color: white;
+}
 
-    .buttons {
-        flex: 0 0 58%;
-        gap: 3px;
-    }
+.btn-operator:hover, .btn-action:hover {
+    background-color: #383838;
+}
 
-    .buttons button {
-        font-size: 15px;
-    }
+.btn-equals {
+    background-color: #0078d4;
+    color: white;
+}
 
-    #result {
-        font-size: 28px;
-    }
+.btn-equals:hover {
+    background-color: #106ebe;
 }
